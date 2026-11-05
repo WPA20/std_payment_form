@@ -1,0 +1,3 @@
+mysqldump: [Warning] Using a password on the command line interface can be insecure.
+Backup successfully completed!
+-rw-rw-r-- 1 waiphyoe waiphyoe 2.4K Oct 30 17:06 /home/waiphyoe/student_lab/mysql_backups/mysql_db_2026-10-30_17-06-01.sql
