@@ -6,9 +6,9 @@ CONTAINER="mysql_db"
 DB="mysql_db"
 
 # Backup directory
-BACKUP_DIR="$HOME/student_lab/mysql_backups"
+BACKUP_DIR="/home/waiphyoe/std_payment/mysql_backups"
 
-# Date and time
+# Date and time (UTC)
 DATE=$(date +"%Y-%m-%d_%H-%M-%S")
 
 # Backup file
@@ -36,3 +36,7 @@ else
     rm -f "$BACKUP_FILE"
     exit 1
 fi
+
+# Delete backups older than 7 days
+find "$BACKUP_DIR" -type f -name "*.sql" -mtime +7 -delete
+
